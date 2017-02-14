@@ -20,43 +20,51 @@ controllers.scoreboard = function (req, res) {
 }
 
 controllers.scoretable = function (req, res) { 
-	var votes = models.Vote.find();	
+	console.log("scoretable");
 	var result = {
 		winner: "",
-		votes: []}
-	result.votes[0].font = "bungee_inline";
-	result.votes[1].font = "fontdiner_swanky";
-	result.votes[2].font = "press_start_2p";
-	result.votes[3].font = "special_elite";
-	result.votes[4].font = "cabin_condensed";
-	result.votes[5].font = "comfortaa";
-	result.votes[6].font = "exo";
-	result.votes[7].font = "orbitron";
-	result.votes[8].font = "arvo";
-	result.votes[9].font = "sansita";		      	
-	result.votes[10].font = "amarante";		      	
-	for(i=0; i<votes.length; i++)
-	{
-		result.votes[0].score += votes[i].bungee_inline;
-		score.votes[1].score += votes[i].fontdiner_swanky;
-		result.votes[2].score += votes[i].press_start_2p;
-		result.votes[3].score += votes[i].special_elite;
-		result.votes[4].score += votes[i].cabin_condensed;
-		result.votes[5].score += votes[i].comfortaa;
-		result.votes[6].score += votes[i].exo;
-		result.votes[7].score += votes[i].orbitron;
-		result.votes[8].score += votes[i].arvo;
-		result.votes[9].score += votes[i].sansita;
-		result.votess[10].score += votes[i].amarante;						
-	}
-	winner = result.votes[0].font;
+		votes: [],
+		voteDetails: []}
+	result.votes[0] = { font: "bungee_inline", score: 0 };
+	result.votes[1] = { font: "fontdiner_swanky", score: 0 };
+	result.votes[2] = { font: "press_start_2p", score: 0 };
+	result.votes[3] = { font: "special_elite", score: 0 };
+	result.votes[4] = { font: "cabin_condensed", score: 0 };
+	result.votes[5] = { font: "comfortaa", score: 0 };
+	result.votes[6] = { font: "exo", score: 0 };
+	result.votes[7] = { font: "orbitron", score: 0 };
+	result.votes[8] = { font: "arvo", score: 0 };
+	result.votes[9] = { font: "sansita", score: 0 };		     	
+	result.votes[10] = { font: "amarante", score: 0 };		
+
+	models.Vote.find({}, function(err, votes) {    
+
+    votes.forEach(function(votesDB) {
+      	result.votes[0].score += votesDB.bungee_inline;
+		result.votes[1].score += votesDB.fontdiner_swanky;
+		result.votes[2].score += votesDB.press_start_2p;
+		result.votes[3].score += votesDB.special_elite;
+		result.votes[4].score += votesDB.cabin_condensed;
+		result.votes[5].score += votesDB.comfortaa;
+		result.votes[6].score += votesDB.exo;
+		result.votes[7].score += votesDB.orbitron;
+		result.votes[8].score += votesDB.arvo;
+		result.votes[9].score += votesDB.sansita;
+		result.votes[10].score += votesDB.amarante;	
+		result.voteDetails.push(votesDB);		
+    });
+	result.winner = result.votes[0].font;
+	var maxVote = result.votes[0].score;
 	for(i=1; i<result.votes.length; i++)
 	{
-		if(result.votes[i].score > result.votes[i-1].score)						
+		if(result.votes[i].score > maxVote)						
 		{
-			winner = score.votes[i].font;
+			result.winner = result.votes[i].font;
+			maxVote = result.votes[i].score;
 		}
 	}
-	res.send(score);
+	res.send(result);     		
+	});	      	
+	
 }
 module.exports = controllers;

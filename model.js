@@ -38,7 +38,7 @@ const VoteSchema = Schema({
     required: true
   },
   arvo: {
-    type: String,
+    type: Number,
     required: true
   },
   sansita: {

@@ -18,7 +18,7 @@ const app = express()
 const bodyParser = require('body-parser');
 const cors = require('cors')
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors());  
 // Middleware modülümüzü yüklüyor ve uygulamamıza bağlıyoruz
 app.use(express.static('toastr'));
 // Routes modülümüzü yüklüyor ve uygulamamıza bağlıyoruz

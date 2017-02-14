@@ -21,47 +21,47 @@
     crossorigin="anonymous">
   <link href="toastr.css" rel="stylesheet"/>
   <style>
-      .amarante td {
+      .amarante{
         font-family: 'Amarante', serif;
         font-size: 16px;
       }
-	  .sansita td {
+	  .sansita{
         font-family: 'Sansita', serif;
         font-size: 16px;
       }
-	  .arvo td {
+	  .arvo{
         font-family: 'Arvo', serif;
         font-size: 16px;
       }
-	  .orbitron td {
+	  .orbitron{
         font-family: 'Orbitron', serif;
         font-size: 16px;
       }
-	  .exo td {
+	  .exo{
         font-family: 'Exo', serif;
         font-size: 16px;
       }
-	  .comfortaa td {
+	  .comfortaa{
         font-family: 'Comfortaa', serif;
         font-size: 16px;
       }
-	  .cabin_condensed td {
+	  .cabin_condensed{
         font-family: 'Cabin Condensed', serif;
         font-size: 16px;
       }
-	  .special_elite td {
+	  .special_elite{
         font-family: 'Special Elite', serif;
         font-size: 16px;
       }
-	  .press_start_2p td {
+	  .press_start_2p{
         font-family: 'Press Start 2P', serif;
         font-size: 16px;
       }
-	  .fontdiner_swanky td {
+	  .fontdiner_swanky{
         font-family: 'Fontdiner Swanky', serif;
         font-size: 16px;
       }
-	  .bungee_inline td {
+	  .bungee_inline{
         font-family: 'Bungee Inline', serif;
         font-size: 16px;
       }
@@ -69,13 +69,34 @@
         font-family: 'Cabin Condensed', serif;
         font-size: 16px;
       }
+      .greenBackground {
+        background-color: lawngreen
+      }
+
     </style>
 </head>
 
 <body>
   <div class="container">    
-  <table class="table" id="scoretable">      
-  </table>  
+    <div class="row">
+      <div class="col-xs-12">
+        <table id="voteDetails" class="table">
+          <th class="comfotaa">Sicil</th>
+          <th class="bungee_inline">bungee_inline</th>
+          <th class="fontdiner_swanky">fontdiner_swanky</th>
+          <th class="press_start_2p">press_start_2p</th>
+          <th class="special_elite">special_elite</th>
+          <th class="cabin_condensed">cabin_condensed</th>
+          <th class="comfortaa">comfortaa</th>
+          <th class="exo">exo</th>
+          <th class="orbitron">orbitron</th>
+          <th class="arvo">arvo</th>
+          <th class="sansita">sansita</th>
+          <th class="amarante">amarante</th>
+        </table>    
+      </div>
+    </div>
+
   </div>        
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -87,14 +108,40 @@
   <script>
   $( document ).ready(function() {          
     $.ajax({
-        url: "http://10.66.28.246:8082/scoretable",
+        url: "/scoretable",
         type: "GET",
         contentType: "application/json; charset=utf-8",        
-        success: function(data) {   
-            for(i=0;i<data.votes.length; i++)
-            {
-                $("#scoretable").append("<tr class='" + data.winner + "'><td>" + data.votes[i].font + "</td><td>" + data.votes[i].score + "</td></tr>");
-            }                  
+        success: function(data) {                      
+            data.voteDetails.forEach(function(voteDetail) {
+            
+              $("#voteDetails").append("<tr>" +
+                                        "<td class='comfortaa'>" + voteDetail.sicil + "</td>" +
+                                        "<td class='bungee_inline'>" + voteDetail.bungee_inline + "</td>" +
+                                        "<td class='fontdiner_swanky'>" + voteDetail.fontdiner_swanky + "</td>" +
+                                        "<td class='press_start_2p'>" + voteDetail.press_start_2p + "</td>" +
+                                        "<td class='special_elite'>" + voteDetail.special_elite + "</td>" +
+                                        "<td class='cabin_condensed'>" + voteDetail.cabin_condensed + "</td>" +
+                                        "<td class='comfortaa'>" + voteDetail.comfortaa + "</td>" +
+                                        "<td class='exo'>" + voteDetail.exo + "</td>" +
+                                        "<td class='orbitron'>" + voteDetail.orbitron + "</td>" +
+                                        "<td class='arvo'>" + voteDetail.arvo + "</td>" +
+                                        "<td class='sansita'>" + voteDetail.sansita + "</td>" +
+                                        "<td class='amarante'>" + voteDetail.amarante + "</td>" )
+            });            
+            $("#voteDetails").append("<tr>" +
+                                        "<td class='comfortaa'></td>" +
+                                        "<td class='bungee_inline'>" + data.votes[0].score + "</td>" +
+                                        "<td class='fontdiner_swanky'>" + data.votes[1].score + "</td>" +
+                                        "<td class='press_start_2p'>" +  data.votes[2].score+ "</td>" +
+                                        "<td class='special_elite'>" + data.votes[3].score + "</td>" +
+                                        "<td class='cabin_condensed'>" + data.votes[4].score + "</td>" +
+                                        "<td class='comfortaa'>" + data.votes[5].score + "</td>" +
+                                        "<td class='exo'>" + data.votes[6].score + "</td>" +
+                                        "<td class='orbitron'>" + data.votes[7].score + "</td>" +
+                                        "<td class='arvo'>" + data.votes[8].score + "</td>" +
+                                        "<td class='sansita'>" + data.votes[9].score + "</td>" +
+                                        "<td class='amarante'>" + data.votes[10].score + "</td>" )
+            $("." + data.winner).addClass("greenBackground");       
         },
         error: function() {
           toastr.error("Hata aldık");
