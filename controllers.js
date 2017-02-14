@@ -1,8 +1,7 @@
 const controllers = {}
 const models = require('./model')
 
-controllers.home = function (req, res) {
-	console.log("get");
+controllers.home = function (req, res) {	
 	res.sendFile('./scrum_board.html', { root: __dirname });
 };
 controllers.save = function (req, res) {
@@ -19,8 +18,7 @@ controllers.scoreboard = function (req, res) {
 	res.sendFile('./scoreboard.html', { root: __dirname });
 }
 
-controllers.scoretable = function (req, res) { 
-	console.log("scoretable");
+controllers.scoretable = function (req, res) { 	
 	var result = {
 		winner: "",
 		votes: [],
