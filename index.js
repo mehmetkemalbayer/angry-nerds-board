@@ -15,12 +15,14 @@ const express = require('express')
 
 // Uygulama instance'ımızı oluşturuyoruz
 const app = express()
-
+const bodyParser = require('body-parser');
+const cors = require('cors')
+app.use(bodyParser.json());
+app.use(cors());
 // Middleware modülümüzü yüklüyor ve uygulamamıza bağlıyoruz
-require('./lib/middleware')(app)
-
+app.use(express.static('toastr'));
 // Routes modülümüzü yüklüyor ve uygulamamıza bağlıyoruz
-require('./lib/routes')(app)
+require('./routes')(app)
 
 // Uygulamayi dinlemek için PORT değişkenini ortam değişkeni olarak aliyoruz
 const port = process.env.PORT

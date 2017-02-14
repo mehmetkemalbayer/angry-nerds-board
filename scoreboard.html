@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Amarante">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sansita">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Orbitron">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Exo">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Cabin+Condensed">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Special+Elite">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bungee+Inline">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+  <link href="toastr.css" rel="stylesheet"/>
+  <style>
+      .amarante td {
+        font-family: 'Amarante', serif;
+        font-size: 16px;
+      }
+	  .sansita td {
+        font-family: 'Sansita', serif;
+        font-size: 16px;
+      }
+	  .arvo td {
+        font-family: 'Arvo', serif;
+        font-size: 16px;
+      }
+	  .orbitron td {
+        font-family: 'Orbitron', serif;
+        font-size: 16px;
+      }
+	  .exo td {
+        font-family: 'Exo', serif;
+        font-size: 16px;
+      }
+	  .comfortaa td {
+        font-family: 'Comfortaa', serif;
+        font-size: 16px;
+      }
+	  .cabin_condensed td {
+        font-family: 'Cabin Condensed', serif;
+        font-size: 16px;
+      }
+	  .special_elite td {
+        font-family: 'Special Elite', serif;
+        font-size: 16px;
+      }
+	  .press_start_2p td {
+        font-family: 'Press Start 2P', serif;
+        font-size: 16px;
+      }
+	  .fontdiner_swanky td {
+        font-family: 'Fontdiner Swanky', serif;
+        font-size: 16px;
+      }
+	  .bungee_inline td {
+        font-family: 'Bungee Inline', serif;
+        font-size: 16px;
+      }
+      .grades {
+        font-family: 'Cabin Condensed', serif;
+        font-size: 16px;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="container">    
+  <table class="table" id="scoretable">      
+  </table>  
+  </div>        
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script> 
+  <script>
+  $( document ).ready(function() {          
+    $.ajax({
+        url: "http://10.66.28.246:8082/scoretable",
+        type: "GET",
+        contentType: "application/json; charset=utf-8",        
+        success: function(data) {   
+            for(i=0;i<data.votes.length; i++)
+            {
+                $("#scoretable").append("<tr class='" + data.winner + "'><td>" + data.votes[i].font + "</td><td>" + data.votes[i].score + "</td></tr>");
+            }                  
+        },
+        error: function() {
+          toastr.error("Hata aldık");
+        }
+
+    }); 
+  });
+  </script>
+  <script src="toastr.min.js"></script>
+</body>
+
+</html>

@@ -4,24 +4,55 @@ const Schema = mongoose.Schema
 
 mongoose.connect(process.env.MONGODB_CONN_STR)
 
-const UserSchema = Schema({
-  firstname: {
+const VoteSchema = Schema({
+  bungee_inline: {
+    type: Number,
+    required: true
+  },
+  fontdiner_swanky: {
+    type: Number,
+    required: true
+  },
+  press_start_2p: {
+    type: Number,
+    required: true    
+  },
+  special_elite: {
+    type: Number,
+    required: true
+  },
+  cabin_condensed: {
+  type: Number,
+  required: true
+  },
+  comfortaa: {
+    type: Number,
+    required: true
+  },
+  exo: {
+    type: Number,
+    required: true    
+  },
+  orbitron: {
+    type: Number,
+    required: true
+  },
+  arvo: {
     type: String,
     required: true
   },
-  lastname: {
-    type: String,
+  sansita: {
+    type: Number,
     required: true
   },
-  email: {
-    type: String,
+  amarante: {
+    type: Number,
+    required: true
+  },
+  sicil: {
+    type: Number,
     required: true,
     unique: true
-  },
-  password: {
-    type: String,
-    required: true
   }
 })
-
-module.exports.User = mongoose.model('User', UserSchema)
+module.exports.Vote = mongoose.model('Vote', VoteSchema)

@@ -1,82 +1,337 @@
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Amarante">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sansita">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Orbitron">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Exo">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Cabin+Condensed">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Special+Elite">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Frontdiner+Smoky">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bungee+Inline">
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<style>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Amarante">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sansita">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Orbitron">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Exo">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Cabin+Condensed">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Special+Elite">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bungee+Inline">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+  <link href="toastr.css" rel="stylesheet"/>
+  <style>
       .amarante td {
         font-family: 'Amarante', serif;
-        font-size: 48px;
+        font-size: 16px;
       }
 	  .sansita td {
         font-family: 'Sansita', serif;
-        font-size: 48px;
+        font-size: 16px;
       }
 	  .Arvo td {
         font-family: 'Arvo', serif;
-        font-size: 48px;
+        font-size: 16px;
       }
 	  .orbitron td {
         font-family: 'Orbitron', serif;
-        font-size: 48px;
+        font-size: 16px;
       }
 	  .exo td {
         font-family: 'Exo', serif;
-        font-size: 48px;
+        font-size: 16px;
       }
 	  .comfortaa td {
         font-family: 'Comfortaa', serif;
-        font-size: 48px;
+        font-size: 16px;
       }
 	  .cabin_condensed td {
         font-family: 'Cabin Condensed', serif;
-        font-size: 48px;
+        font-size: 16px;
       }
 	  .special_elite td {
         font-family: 'Special Elite', serif;
-        font-size: 48px;
+        font-size: 16px;
       }
 	  .press_start_2p td {
         font-family: 'Press Start 2P', serif;
-        font-size: 48px;
+        font-size: 16px;
       }
-	  .frontdiner_smoky td {
-        font-family: 'Frontdiner Smoky', serif;
-        font-size: 48px;
+	  .fontdiner_swanky td {
+        font-family: 'Fontdiner Swanky', serif;
+        font-size: 16px;
       }
 	  .bungee_inline td {
         font-family: 'Bungee Inline', serif;
-        font-size: 48px;
+        font-size: 16px;
+      }
+      .grades {
+        font-family: 'Cabin Condensed', serif;
+        font-size: 16px;
       }
     </style>
 </head>
+
 <body>
-<table class="table">
-<tr class="amarante"><td>AMARANTE</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr></div>
-<tr class="sansita"><td>SANSITA</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-<tr class="arvo"><td>ARVO</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-<tr class="orbitron"><td>ORBITRON</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-<tr class="exo"><td>EXO</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-<tr class="comfortaa"><td>COMFORTAA</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-<tr class="cabin_condensed"><td>CABIN CONDENSED</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-<tr class="special_elite"><td>SPECIAL ELITE</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-<tr class="press_start_2p"><td>PRESS START 2P</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-<tr class="frontdiner_smoky"><td>FRONTDINER SMOKY</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-<tr class="bungee_inline"><td>BUNGEE INLINE</td><td>PBI</td><td>TO DO</td><td>IN PROGRESS</td><td>DONE</td></tr>
-</table>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <div class="container">    
+  <table class="table">
+    <tr class="amarante">
+      <td>        
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="amarante" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>        
+      </td>
+      <td>AMARANTE</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    </div>
+    <tr class="sansita">
+      <td>
+      <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="sansita" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>SANSITA</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    <tr class="arvo">
+      <td>
+      <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="arvo" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>ARVO</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    <tr class="orbitron">
+      <td>        
+      <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="orbitron" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>ORBITRON</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    <tr class="exo">
+      <td>
+      <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="exo" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>EXO</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    <tr class="comfortaa">
+      <td>
+      <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="comfortaa" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>COMFORTAA</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    <tr class="cabin_condensed">
+      <td>
+      <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="cabin_condensed" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>CABIN CONDENSED</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    <tr class="special_elite">
+      <td>
+      <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="special_elite" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>SPECIAL ELITE</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    <tr class="press_start_2p">
+      <td>
+       <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="press_start_2p" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>PRESS START 2P</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    <tr class="fontdiner_swanky">
+      <td>
+       <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="fontdiner_swanky" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>FONTDINER SWANKY</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+    <tr class="bungee_inline">
+      <td>
+      <div class="grades">
+          <a href="#" class="add" ><span class="glyphicon glyphicon-plus"></span></a>
+          <span id="bungee_inline" class="badge">0</span>
+          <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+      </td>
+      <td>BUNGEE INLINE</td>
+      <td>PBI</td>
+      <td>TO DO</td>
+      <td>IN PROGRESS</td>
+      <td>DONE</td>
+    </tr>
+  </table>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="pwd">Sicil:</label>
+        <input type="text" class="form-control" id="sicil">
+      </div>
+    </div>
+  </div> 
+  <button type="submit" class="btn btn-primary" id="kaydet">Kaydet</button> 
+  
+  <div><h3>Kalan puanınız: <label id="total"></label></h3> </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script> 
+  <script>
+  $( document ).ready(function() {        
+    var limit = 6;
+    var total = 0;
+    var used = 0;
+    $("#total").text(limit);
+    $(".add").click(function() {
+      event.preventDefault();
+      total = 0;  
+      for (i = 0; i < $("span.badge").length; i++) { 
+        total = total + parseInt($($("span.badge")[i]).text());      
+      }    
+      if (total >= limit)
+      {
+        toastr.error("Verecen puanınız kalmadı!");
+      }
+      
+      else{
+        $("#total").text(limit- total -1 );
+        $(this).next("span").text(parseInt($(this).next("span").text()) + 1); 
+      }
+      
+    });
+    $(".remove").click(function() {
+      event.preventDefault();
+      if($(this).prev("span").text() > 0)
+      {
+        $(this).prev("span").text(parseInt($(this).prev("span").text()) - 1); 
+        total = 0;
+        for (i = 0; i < $("span.badge").length; i++) { 
+          total = total + parseInt($($("span.badge")[i]).text());      
+        }    
+        $("#total").text(total);
+        
+      }
+      else {
+        toastr.error("Not sıfırdan küçük olamaz");
+      }
+    });
+    $("#kaydet").click(function() {
+      event.preventDefault();
+      total = 0;  
+      for (i = 0; i < $("span.badge").length; i++) { 
+        total = total + parseInt($($("span.badge")[i]).text());      
+      }
+      if(total < limit) { 
+        toastr.error("Bütün puanlarınızı kullanmalısınız.");
+        return;        
+      }
+      if($("#sicil").val() === "") { 
+        toastr.error("Sicil alanı boş olamaz");
+        return;
+      };
+      var inputData = {
+          bungee_inline: $("#bungee_inline").text(),
+          fontdiner_swanky: $("#fontdiner_swanky").text(),
+          press_start_2p: $("#press_start_2p").text(),
+          special_elite: $("#special_elite").text(),
+          cabin_condensed: $("#cabin_condensed").text(),
+          comfortaa: $("#comfortaa").text(),
+          exo: $("#exo").text(),
+          orbitron: $("#orbitron").text(),
+          arvo: $("#arvo").text(),
+          sansita: $("#sansita").text(),
+          amarante: $("#amarante").text(),
+          sicil: $("#sicil").val()
+      }
+      $.ajax({
+        url: "http://10.66.28.246:8082/save",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(inputData),
+        success: function(data) {
+          toastr.success(data);
+        },
+        error: function() {
+          toastr.error("Hata aldık");
+        }
+
+      });
+    });
+  });
+  </script>
+  <script src="toastr.min.js"></script>
 </body>
+
 </html>
