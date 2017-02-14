@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bungee+Inline">
+  <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
@@ -69,6 +70,10 @@
         font-family: 'Cabin Condensed', serif;
         font-size: 16px;
       }
+      .barrio {
+        font-family: 'Barrio', cursive;
+        font-size: 16px;
+      }
       .greenBackground {
         background-color: lawngreen
       }
@@ -81,7 +86,7 @@
     <div class="row">
       <div class="col-xs-12">
         <table id="voteDetails" class="table">
-          <th class="comfotaa">Sicil</th>
+          <th class="barrio">Sicil</th>
           <th class="bungee_inline">bungee_inline</th>
           <th class="fontdiner_swanky">fontdiner_swanky</th>
           <th class="press_start_2p">press_start_2p</th>
@@ -115,7 +120,7 @@
             data.voteDetails.forEach(function(voteDetail) {
             
               $("#voteDetails").append("<tr>" +
-                                        "<td class='comfortaa'>" + voteDetail.sicil + "</td>" +
+                                        "<td class='barrio'>" + voteDetail.sicil + "</td>" +
                                         "<td class='bungee_inline'>" + voteDetail.bungee_inline + "</td>" +
                                         "<td class='fontdiner_swanky'>" + voteDetail.fontdiner_swanky + "</td>" +
                                         "<td class='press_start_2p'>" + voteDetail.press_start_2p + "</td>" +
@@ -129,7 +134,7 @@
                                         "<td class='amarante'>" + voteDetail.amarante + "</td>" )
             });            
             $("#voteDetails").append("<tr>" +
-                                        "<td class='comfortaa'></td>" +
+                                        "<td class='barrio'></td>" +
                                         "<td class='bungee_inline'>" + data.votes[0].score + "</td>" +
                                         "<td class='fontdiner_swanky'>" + data.votes[1].score + "</td>" +
                                         "<td class='press_start_2p'>" +  data.votes[2].score+ "</td>" +
