@@ -23,300 +23,376 @@
   <style>
       .amarante td {
         font-family: 'Amarante', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .sansita td {
         font-family: 'Sansita', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .Arvo td {
         font-family: 'Arvo', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .orbitron td {
         font-family: 'Orbitron', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .exo td {
         font-family: 'Exo', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .comfortaa td {
         font-family: 'Comfortaa', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .cabin_condensed td {
         font-family: 'Cabin Condensed', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .special_elite td {
         font-family: 'Special Elite', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .press_start_2p td {
         font-family: 'Press Start 2P', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .fontdiner_swanky td {
         font-family: 'Fontdiner Swanky', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .bungee_inline td {
         font-family: 'Bungee Inline', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
     .amarante {
         font-family: 'Amarante', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .sansita {
         font-family: 'Sansita', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .Arvo {
         font-family: 'Arvo', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .orbitron {
         font-family: 'Orbitron', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .exo {
         font-family: 'Exo', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .comfortaa {
         font-family: 'Comfortaa', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .cabin_condensed {
         font-family: 'Cabin Condensed', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .special_elite {
         font-family: 'Special Elite', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .press_start_2p {
         font-family: 'Press Start 2P', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .fontdiner_swanky {
         font-family: 'Fontdiner Swanky', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
 	  .bungee_inline {
         font-family: 'Bungee Inline', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
       .grades {
         font-family: 'Cabin Condensed', serif;
-        font-size: 16px;
+        font-size: 12px;
       }
     </style>
-</head>
+
+
+
+ <style>
+    /* Space out content a bit */
+  body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  /* Everything but the jumbotron gets side spacing for mobile first views */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  /* Custom page header */
+  .header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  /* Make the masthead heading the same height as the navigation */
+  .header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+
+  /* Custom page footer */
+  .footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  /* Customize container */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 730px;
+    }
+  }
+  .container-narrow > hr {
+    margin: 30px 0;
+  }
+
+  /* Main marketing message and sign up button */
+  .jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+  }
+
+  /* Supporting marketing content */
+  .marketing {
+    margin: 40px 0;
+  }
+  .marketing p + h4 {
+    margin-top: 28px;
+  }
+
+  /* Responsive: Portrait tablets and up */
+  @media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+      margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+      border-bottom: 0;
+    }
+  }
+    </style>
+    </head>
 
 <body>
-  
-  <div class="container">       
+     <div class="container">
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="/vote">Oylama</a></li>
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation" class="active"><a href="/vote">Oylama</a></li>
             <li role="presentation"><a href="/penalty">Cezalar</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">AngryNerds</h3>
       </div>
       <div class="container">
-          <div class="row">
-              <div class="col-sm-12">
-                <canvas id="myChart" width="600" height="400" class="center-block"></canvas>
+           <table class="table">
+          <tr class="amarante">
+            <td> 
+              <div class="grades row">       
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="amarante" class="badge amarante">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>        
               </div>
+            </td>
+            <td>AMARANTE</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
           </div>
-      </div>    
-  <table class="table">
-    <tr class="amarante">
-      <td> 
-        <div class="grades row">       
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="amarante" class="badge amarante">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>        
-        </div>
-      </td>
-      <td>AMARANTE</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    </div>
-    <tr class="sansita">
-      <td>
-        <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="sansita" class="badge sansita">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>SANSITA</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    <tr class="arvo">
-      <td>
-      <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="arvo" class="badge arvo">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>ARVO</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    <tr class="orbitron">
-      <td>        
-      <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="orbitron" class="badge orbitron">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>ORBITRON</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    <tr class="exo">
-      <td>
-      <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="exo" class="badge exo">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>EXO</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    <tr class="comfortaa">
-      <td>
-      <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="comfortaa" class="badge comfortaa">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>COMFORTAA</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    <tr class="cabin_condensed">
-      <td>
-      <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="cabin_condensed" class="badge cabin_condensed">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>CABIN CONDENSED</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    <tr class="special_elite">
-      <td>
-      <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="special_elite" class="badge special_elite">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>SPECIAL ELITE</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    <tr class="press_start_2p">
-      <td>
-       <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="press_start_2p" class="badge press_start_2p">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>PRESS START 2P</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    <tr class="fontdiner_swanky">
-      <td>
-       <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="fontdiner_swanky" class="badge fontdiner_swanky">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>FONTDINER SWANKY</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-    <tr class="bungee_inline">
-      <td>
-      <div class="grades row">
-          <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
-          <span id="bungee_inline" class="badge bungee_inline">0</span>
-          <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
-        </div>
-      </td>
-      <td>BUNGEE INLINE</td>
-      <td>PBI</td>
-      <td>TO DO</td>
-      <td>IN PROGRESS</td>
-      <td>DONE</td>
-    </tr>
-  </table>
-  <div class="row">
-    <div class="col-xs-6 col-md-2">
-      <div class="form-group">
-        <label for="pwd">Sicil:</label>
-        <input type="text" class="form-control" id="sicil">
+          <tr class="sansita">
+            <td>
+              <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="sansita" class="badge sansita">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>SANSITA</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+          <tr class="arvo">
+            <td>
+            <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="arvo" class="badge arvo">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>ARVO</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+          <tr class="orbitron">
+            <td>        
+            <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="orbitron" class="badge orbitron">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>ORBITRON</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+          <tr class="exo">
+            <td>
+            <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="exo" class="badge exo">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>EXO</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+          <tr class="comfortaa">
+            <td>
+            <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="comfortaa" class="badge comfortaa">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>COMFORTAA</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+          <tr class="cabin_condensed">
+            <td>
+            <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="cabin_condensed" class="badge cabin_condensed">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>CABIN CONDENSED</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+          <tr class="special_elite">
+            <td>
+            <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="special_elite" class="badge special_elite">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>SPECIAL ELITE</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+          <tr class="press_start_2p">
+            <td>
+            <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="press_start_2p" class="badge press_start_2p">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>PRESS START 2P</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+          <tr class="fontdiner_swanky">
+            <td>
+            <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="fontdiner_swanky" class="badge fontdiner_swanky">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>FONTDINER SWANKY</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+          <tr class="bungee_inline">
+            <td>
+            <div class="grades row">
+                <a href="#" class="add btn btn-primary" ><span class="glyphicon glyphicon-plus"></span></a>
+                <span id="bungee_inline" class="badge bungee_inline">0</span>
+                <a href="#" class="remove btn btn-primary"><span class="glyphicon glyphicon-minus"></span></a>
+              </div>
+            </td>
+            <td>BUNGEE INLINE</td>
+            <td>PBI</td>
+            <td>TO DO</td>
+            <td>IN PROGRESS</td>
+            <td>DONE</td>
+          </tr>
+        </table>
+        <div class="row">
+          <div class="col-xs-6 col-md-2">
+            <div class="form-group">
+              <label for="pwd">Sicil:</label>
+              <input type="text" class="form-control" id="sicil">
+            </div>
+        
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col-xs-4 col-md-2"><button type="submit" class="btn btn-block btn-md btn-primary" id="kaydet">Kaydet</button> </div>
+          <div class="col-xs-4 col-md-2"><a href="/scoreboard" class="btn btn-block btn-md btn-success" >Sonuçlar</a></div>
+        </div>  
+        <div><h3>Kalan puanınız: <label id="total"></label></h3> </div>
       </div>
-  
-    </div>
-  </div> 
-  <div class="row">
-    <div class="col-xs-6 col-md-2"><button type="submit" class="btn btn-block btn-lg btn-primary" id="kaydet">Kaydet</button> </div>
-    <div class="col-xs-6 col-md-2"><a href="/scoreboard" class="btn btn-block btn-lg btn-success" >Sonuçlar</a></div>
-  </div>
-  
-  
-  <div><h3>Kalan puanınız: <label id="total"></label></h3> </div>
-  </div>
+    </div>   
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.12.0/jquery.validate.min.js"></script> 
   <script>
   $( document ).ready(function() {        
     var limit = 6;
@@ -400,7 +476,7 @@
     });
   });
   </script>
-  <script src="toastr.min.js"></script>
+  <script src="toastr.min.js"></script>  
 </body>
 
 </html>
